@@ -16,9 +16,6 @@ interface MusicCardProps {
   style?: StyleProp<ViewProps>[];
 }
 
-const defaultHeight = 243;
-const defaultWidth = 190;
-
 export const MusicCard: React.FC<MusicCardProps> = ({
   style = [],
   image,
@@ -26,17 +23,11 @@ export const MusicCard: React.FC<MusicCardProps> = ({
   artist,
 }): JSX.Element => {
   return (
-    <View
-      style={[
-        styles.container,
-        { ...style },
-        {
-          height: defaultHeight,
-          width: defaultWidth,
-        },
-      ]}
-    >
-      <Image style={styles.image} source={image} />
+    <View style={[styles.container, { ...style }]}>
+      <View style={styles.imageContainer}>
+        <Image style={styles.image} source={image} />
+      </View>
+
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.artist}>{artist}</Text>
     </View>

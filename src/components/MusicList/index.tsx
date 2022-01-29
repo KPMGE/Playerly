@@ -10,6 +10,7 @@ export const MusicList: React.FC = (): JSX.Element => {
       horizontal
       data={dummy_artists}
       keyExtractor={(item) => item.title}
+      showsHorizontalScrollIndicator={false}
       ItemSeparatorComponent={() => <View style={{ marginLeft: 20 }} />}
       renderItem={({ item }): any => (
         <MusicCard

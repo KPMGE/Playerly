@@ -1,10 +1,16 @@
 import React from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, View, StyleProp, ViewStyle } from "react-native";
 import { MusicCard } from "../MusicCard";
 
 import dummy_artists from "../../dummy_data/dummy_artists.json";
 
-export const MusicList: React.FC = (): JSX.Element => {
+interface MusicListProps {
+  cardStyle?: StyleProp<ViewStyle>;
+}
+
+export const MusicList: React.FC<MusicListProps> = ({
+  cardStyle,
+}): JSX.Element => {
   return (
     <FlatList
       horizontal
@@ -14,8 +20,9 @@ export const MusicList: React.FC = (): JSX.Element => {
       ItemSeparatorComponent={() => <View style={{ marginLeft: 20 }} />}
       renderItem={({ item }): any => (
         <MusicCard
+          style={cardStyle}
           key={item.title}
-          image={require("../../dummy_data/love_of_my_life.jpg")}
+          image={require("../../dummy_data/beliver.jpg")}
           title={item.title}
           artist={item.artist}
         />

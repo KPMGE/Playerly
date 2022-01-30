@@ -21,7 +21,7 @@ export default StyleSheet.create({
     elevation: 5,
   },
   image: {
-    borderRadius: 10,
+    borderRadius: 5,
     width: "100%",
     height: "100%",
     resizeMode: "contain",

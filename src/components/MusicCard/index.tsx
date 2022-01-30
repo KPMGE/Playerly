@@ -5,7 +5,7 @@ import {
   Image,
   ImageSourcePropType,
   StyleProp,
-  ViewProps,
+  ViewStyle,
 } from "react-native";
 import styles from "./styles";
 
@@ -13,17 +13,17 @@ interface MusicCardProps {
   image: ImageSourcePropType;
   title: String;
   artist: String;
-  style?: StyleProp<ViewProps>[];
+  style?: StyleProp<ViewStyle>;
 }
 
 export const MusicCard: React.FC<MusicCardProps> = ({
-  style = [],
+  style,
   image,
   title,
   artist,
 }): JSX.Element => {
   return (
-    <View style={[styles.container, { ...style }]}>
+    <View style={[styles.container, style]}>
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={image} />
       </View>

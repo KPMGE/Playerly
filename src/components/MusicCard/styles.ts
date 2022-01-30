@@ -11,6 +11,7 @@ export default StyleSheet.create({
   imageContainer: {
     width: "100%",
     height: "75%",
+    borderRadius: 10,
     shadowColor: "#fff",
     shadowOffset: {
       width: 2,
@@ -18,13 +19,13 @@ export default StyleSheet.create({
     },
     shadowOpacity: 0.5,
     shadowRadius: 3,
-    elevation: 5,
+    elevation: 20,
   },
   image: {
-    borderRadius: 5,
     width: "100%",
     height: "100%",
     resizeMode: "contain",
+    borderRadius: 20,
   },
   title: {
     marginTop: 16,

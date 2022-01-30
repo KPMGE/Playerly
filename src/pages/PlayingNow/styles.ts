@@ -30,4 +30,22 @@ export default StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
   },
+  playButtonsContainer: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  slider: {
+    width: "100%",
+    height: 80,
+  },
+  playButtons: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  play: {
+    width: "60%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 });
